@@ -1,0 +1,11 @@
+.Link {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+        text-decoration: none;
+    }
+}

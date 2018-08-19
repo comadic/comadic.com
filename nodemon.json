@@ -1,0 +1,14 @@
+{
+    "verbose": false,
+    "watch": [
+      "src/client/assets/images",
+      "src/client/routes.js",
+      "src/client/fetch-data",
+      "src/server",
+      "webpack",
+      "nodemon.json"
+    ],
+    "exec": "npm run build-dev && node compiled/server.dev.js",
+    "ext": "js jsx json scss"
+  }
+  

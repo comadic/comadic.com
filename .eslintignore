@@ -1,0 +1,5 @@
+/.vscode
+/compiled
+/coverage
+/flow-typed
+/node_modules

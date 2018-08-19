@@ -1,0 +1,82 @@
+.mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 8rem;
+    z-index: 1;
+    cursor: ponter;
+    transition: all 0.6s ease 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+}
+
+.mobileMenu {
+    // background: transparent;
+    cursor: pointer;
+}
+
+.mobileMenuDropdown {
+    position: fixed;
+    top: 6.4rem;
+    right: 0;
+    bottom: 8rem;
+    left: 0;
+    width: 100%;
+    height: 0;
+    // border-top: 1px solid white;
+    background-color: #FFF;
+    opacity: 0;
+    cursor: ponter;
+    transition: all 0.3s ease;
+
+    & a {
+        height: 0;
+        left: 0;
+        border-top: 1px solid rgba(76, 76, 76, 0.3);
+        color: #4c4c4c;
+        opacity: 0;
+        font-size: 1.2rem;
+        text-decoration: none;
+        // opacity: 0;
+        transition: all 0.15s ease;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            border-bottom: 1px solid rgba(76, 76, 76, 0.3);
+        }
+    }
+}
+
+.mobileMenuOpen {
+    height: calc(100vh - (8rem + 6.4rem));
+    opacity: 1;
+    
+    & a {
+        height: calc((100vh - (8rem + 6.4rem)) / 5);
+        font-size: 2.4rem;
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (min-width: 760px) {
+    .mobile {
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.6s ease;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+}
