@@ -33,6 +33,11 @@
         display: none;
     }
 
+    & a {
+        color: #4c4c4c;
+        text-decoration: none;
+    }
+
     &:hover {
         transform: scale(1.05);
         opacity: 1;
@@ -84,6 +89,6 @@
 
     .company {
         width: 33%;
-        opacity: 1;
+        opacity: 0.5;
     }
 }

@@ -3,6 +3,7 @@
 import React from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
+import ContactLink from '../links/ContactLink';
 import styles from './Footer.scss';
 
 export default () => (
@@ -14,7 +15,7 @@ export default () => (
     </div>
     <div className={styles.email}>
       <FaEnvelope />
-      contact@comadic.com
+      <ContactLink label="contact@comadic.com" />
     </div>
   </div>
 );

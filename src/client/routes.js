@@ -10,7 +10,6 @@ import IndexPage from './components/pages/IndexPage';
 import AboutPage from './components/pages/AboutPage';
 import ServicesPage from './components/pages/ServicesPage';
 import JobsPage from './components/pages/JobsPage';
-import ContactPage from './components/pages/ContactPage';
 import NotFoundPage from './components/pages/Error404';
 
 const routes = (store: *) => {
@@ -46,7 +45,6 @@ const routes = (store: *) => {
       <Route path="about" component={AboutPage} />
       <Route path="services" component={ServicesPage} />
       <Route path="jobs" component={JobsPage} />
-      <Route path="contact" component={ContactPage} />
       <Route path="*" component={NotFoundPage} />
     </Route>
   );

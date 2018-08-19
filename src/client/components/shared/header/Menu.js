@@ -4,6 +4,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import { Link } from 'react-router';
 
+import ContactLink from '../links/ContactLink';
 import styles from './Menu.scss';
 
 const cx = classnames.bind(styles);
@@ -23,7 +24,7 @@ const Menu = () => (
       <Link to="/jobs">JOBS</Link>
     </div>
     <div className={cx('menuItem', 'highlight')}>
-      <Link to="/contact">CONTACT</Link>
+      <ContactLink label="CONTACT" />
     </div>
   </div>
 );

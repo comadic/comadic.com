@@ -10,8 +10,6 @@ import styles from './Header.scss';
 
 const cx = classnames.bind(styles);
 
-type Props = {||};
-
 const Header = () => (
   <header className={cx('container')}>
     <MobileMenuDropdown />

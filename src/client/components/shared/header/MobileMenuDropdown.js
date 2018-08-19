@@ -5,6 +5,7 @@ import classnames from 'classnames/bind';
 import { Link } from 'react-router';
 import { FaBars } from 'react-icons/fa';
 
+import ContactLink from '../links/ContactLink';
 import styles from './MobileMenuDropdown.scss';
 
 const cx = classnames.bind(styles);
@@ -21,7 +22,6 @@ class MobileMenuDropdown extends Component<Props, State> {
   };
 
   toggleOpen = () => {
-    console.log(this.state.open);
     this.setState({ open: !this.state.open });
   };
 
@@ -46,9 +46,7 @@ class MobileMenuDropdown extends Component<Props, State> {
           <Link to="/jobs" onClick={this.toggleOpen}>
             JOBS
           </Link>
-          <Link to="/contact" onClick={this.toggleOpen}>
-            CONTACT
-          </Link>
+          <ContactLink label="CONTACT" onClick={this.toggleOpen} />
         </div>
       </div>
     );
