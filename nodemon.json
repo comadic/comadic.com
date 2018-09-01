@@ -8,7 +8,7 @@
       "webpack",
       "nodemon.json"
     ],
-    "exec": "npm run build-dev && node compiled/server.dev.js",
+    "exec": "npm run build-dev && node public/compiled/server.dev.js",
     "ext": "js jsx json scss"
   }
   

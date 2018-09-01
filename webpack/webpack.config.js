@@ -46,7 +46,7 @@ module.exports = (env = {}) => {
     mode: 'production',
     devtool: 'cheap-module-source-map',
     context: PATHS.app,
-    entry: { app: ['./src/client/index'] },
+    entry: { app: ['../src/client/index'] },
     node,
     output: {
       path: PATHS.assets,

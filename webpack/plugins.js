@@ -8,6 +8,7 @@ module.exports = ({ production = false, browser = false } = {}) => {
   const compress = { warnings: false };
   const compileTimeConstantForMinification = { __PRODUCTION__: JSON.stringify(production) };
 
+  // dev server
   if (!production && !browser) {
     return [
       new webpack.EnvironmentPlugin(['NODE_ENV']),
@@ -15,6 +16,7 @@ module.exports = ({ production = false, browser = false } = {}) => {
       new webpack.BannerPlugin(bannerOptions),
     ];
   }
+  // dev client
   if (!production && browser) {
     return [
       new webpack.EnvironmentPlugin(['NODE_ENV']),
@@ -23,6 +25,7 @@ module.exports = ({ production = false, browser = false } = {}) => {
       new webpack.NoEmitOnErrorsPlugin(),
     ];
   }
+  // prod server
   if (production && !browser) {
     return [
       new webpack.EnvironmentPlugin(['NODE_ENV']),
@@ -31,12 +34,13 @@ module.exports = ({ production = false, browser = false } = {}) => {
       new UglifyJsPlugin({ parallel: true, sourceMap: true }),
     ];
   }
+  // prod client
   if (production && browser) {
     return [
       new webpack.EnvironmentPlugin(['NODE_ENV']),
       new webpack.DefinePlugin(compileTimeConstantForMinification),
       new ExtractTextPlugin({
-        filename: '[contenthash].css',
+        filename: '[chunkhash].css',
         allChunks: true,
       }),
       new UglifyJsPlugin({ parallel: true, sourceMap: true }),
