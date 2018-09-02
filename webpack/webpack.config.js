@@ -15,9 +15,8 @@ const resolve = require('./resolve');
 module.exports = (env = {}) => {
   const isProduction = process.env.NODE_ENV === 'production';
   const isBrowser = env.browser;
-  console.log(
-    `Running webpack in ${process.env.NODE_ENV} mode on ${isBrowser ? 'browser' : 'server'}`,
-  );
+  // prettier-ignore
+  console.log(`Running webpack in ${process.env.NODE_ENV} mode on ${isBrowser ? 'browser' : 'server'}`);
 
   const hotMiddlewareScript =
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true';
