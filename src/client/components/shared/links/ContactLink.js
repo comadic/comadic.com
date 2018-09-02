@@ -6,8 +6,12 @@ type Props = {
   label: string,
 };
 
-export default ({ label, ...props }: Props) => (
+const ContactLink = ({ label, ...props }: Props) => (
   <a href="mailto:contact@comadic.com?subject=Contact" {...props}>
     {label}
   </a>
 );
+
+ContactLink.displayName = 'ContactLink';
+
+export default ContactLink;

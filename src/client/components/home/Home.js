@@ -8,7 +8,7 @@ import styles from './Home.scss';
 
 const cx = classnames.bind(styles);
 
-export const Homes = () => [
+export const Home = () => (
   <HomeImage>
     <div className={cx('container')}>
       <div className={cx('contentBox')}>
@@ -20,7 +20,9 @@ export const Homes = () => [
         <h2 className={cx('subheadline')}>Need help with your next project?</h2>
       </div>
     </div>
-  </HomeImage>,
-];
+  </HomeImage>
+);
 
-export default Homes;
+Home.displayName = 'Home';
+
+export default Home;

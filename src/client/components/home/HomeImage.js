@@ -19,6 +19,8 @@ type State = {|
 |};
 
 class HomeImage extends Component<Props, State> {
+  static displayName = 'HomeImage';
+
   state = {
     loaded: false,
   };

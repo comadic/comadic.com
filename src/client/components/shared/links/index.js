@@ -1,4 +1,3 @@
 // @flow
 
-export { default as Links } from './Links';
-export * from './Links';
+export { default as ContactLink } from './ContactLink';

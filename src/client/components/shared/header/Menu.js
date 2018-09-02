@@ -4,7 +4,7 @@ import React from 'react';
 import classnames from 'classnames/bind';
 import { Link } from 'react-router';
 
-import ContactLink from '../links/ContactLink';
+import { ContactLink } from '../links';
 import styles from './Menu.scss';
 
 const cx = classnames.bind(styles);
@@ -28,5 +28,7 @@ const Menu = () => (
     </div>
   </div>
 );
+
+Menu.displayName = 'Menu';
 
 export default Menu;

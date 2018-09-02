@@ -3,10 +3,10 @@
 import React from 'react';
 import { FaPhone, FaEnvelope } from 'react-icons/fa';
 
-import ContactLink from '../links/ContactLink';
+import { ContactLink } from '../links';
 import styles from './Footer.scss';
 
-export default () => (
+const Footer = () => (
   <div className={styles.container}>
     <div className={styles.company}>Comadic Ltd</div>
     <div className={styles.telephone}>
@@ -19,3 +19,7 @@ export default () => (
     </div>
   </div>
 );
+
+Footer.displayName = 'Footer';
+
+export default Footer;

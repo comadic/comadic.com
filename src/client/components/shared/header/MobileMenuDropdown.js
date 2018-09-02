@@ -5,7 +5,7 @@ import classnames from 'classnames/bind';
 import { Link } from 'react-router';
 import { FaBars } from 'react-icons/fa';
 
-import ContactLink from '../links/ContactLink';
+import { ContactLink } from '../links';
 import styles from './MobileMenuDropdown.scss';
 
 const cx = classnames.bind(styles);
@@ -17,6 +17,8 @@ type State = {|
 |};
 
 class MobileMenuDropdown extends Component<Props, State> {
+  static displayName = 'MobileMenuDropdown';
+
   state = {
     open: false,
   };

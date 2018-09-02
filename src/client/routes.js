@@ -7,9 +7,9 @@ import { fetchIndexData } from './fetch-data';
 
 import Layout from './components/pages/Layout';
 import IndexPage from './components/pages/IndexPage';
-import AboutPage from './components/pages/AboutPage';
-import ServicesPage from './components/pages/ServicesPage';
-import JobsPage from './components/pages/JobsPage';
+// import AboutPage from './components/pages/AboutPage';
+// import ServicesPage from './components/pages/ServicesPage';
+// import JobsPage from './components/pages/JobsPage';
 import NotFoundPage from './components/pages/Error404';
 
 const routes = (store: *) => {
@@ -42,9 +42,9 @@ const routes = (store: *) => {
   return (
     <Route path="/" component={Layout}>
       <IndexRoute component={IndexPage} fetchData={fetchIndexData} />
-      <Route path="about" component={AboutPage} />
-      <Route path="services" component={ServicesPage} />
-      <Route path="jobs" component={JobsPage} />
+      <Route path="about" component={IndexPage} />
+      <Route path="services" component={IndexPage} />
+      <Route path="jobs" component={IndexPage} />
       <Route path="*" component={NotFoundPage} />
     </Route>
   );

@@ -9,7 +9,6 @@ import createRoutes from '../../client/routes';
 import configureStore from '../../client/store';
 import fetchDataForRoute from '../../client/utils/fetchDataForRoute';
 import pageRenderer from './pageRenderer';
-import { whitelisted } from './whitelist';
 
 /*
  * Export render function to be used in server/config/routes.js
